@@ -1,0 +1,11 @@
+{
+    "name": "Ruby Slack Giphy Bot",
+    "description": "A giphy bot for slack written in ruby",
+    "repository": "https://github.com/thieman/tarrasch",
+    "keywords": ["giphy", "slack", "ruby", "rails"],
+    "env": {
+        "APP_TOKEN": {
+            "description": "The API token for your new bot. You can get this from the Custom Integrations section on Slack's website."
+        }
+    }
+}
