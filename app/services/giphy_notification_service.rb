@@ -7,13 +7,13 @@ class GiphyNotificationService
     end
     @client = Slack::RealTime::Client.new
 
-    client.on :message do |data|
+    @client.on :message do |data|
 
       case data.text
       when /^jify .*/ then
         text = data.text.match(/^jify (.*)/)[1]
         url = Giphy.random(text).url.to_s
-        client.message(channel: data.channel, text: "#{url}") unless data.channel == "#alerts"
+        @client.message(channel: data.channel, text: "#{url}") unless data.channel == "#alerts"
       end
     end
   end
