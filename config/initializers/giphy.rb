@@ -1,2 +1,2 @@
 gns = GiphyNotificationService.new
-gns.client.start!
+gns.client.start_async
