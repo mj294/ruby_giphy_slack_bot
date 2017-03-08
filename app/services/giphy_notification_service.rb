@@ -4,7 +4,6 @@ class GiphyNotificationService
   def initialize(app_token: nil)
     Slack.configure do |config|
       config.token = app_token
-      config.token ||= Ibotta::Application.config.slack[:token]
     end
     @client = Slack::RealTime::Client.new
 
